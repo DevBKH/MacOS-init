@@ -59,10 +59,49 @@ set -o vi\
 \f1 \'bc\'f6\'c1\'a4\'c7\'d8\'c1\'d6\'b4\'c2
 \f0  
 \f1 \'b8\'ed\'b7\'c9\'be\'ee
+\f0 -zsh 
+\f1 \'c5\'d7\'b8\'b6
+\f0  
+\f1 \'bb\'e7\'bf\'eb\'bd\'c3
 \f0 \
-PROMPT='%~:%n> '\
+#autoload -Uz promptinit\
+#promptinit\
+#prompt restore                 # 
+\f1 \'c5\'d7\'b8\'b6
+\f0  
+\f1 \'c1\'df
+\f0  
+\f1 restore \'c5\'d7\'b8\'b6 \'bb\'e7\'bf\'eb\'bd\'c3
+\f0 \
+#prompt -p                         # 
+\f1 \'c5\'d7\'b8\'b6
+\f0  
+\f1 \'b8\'f1\'b7\'cf \'ba\'b8\'bf\'a9\'c1\'d6\'b4\'c2 \'b8\'ed\'b7\'c9\'be\'ee
+\f0 \
+\
+# 
+\f1 \'be\'c6\'b7\'a1\'b4\'c2 \'c4\'bf\'bd\'ba\'c5\'d2 \'c7\'c1\'b7\'d2\'c7\'c1\'c6\'ae \'c7\'a5\'bd\'c3
+\f0 \
+#PROMPT='%~:%n> '\
+\
+# 
+\f1 \'be\'c6\'b7\'a1\'b4\'c2
+\f0  
+\f1 \'c7\'c1\'b7\'d2\'c7\'c1\'c6\'ae\'bf\'a1
+\f0  
+\f1 \'bd\'c3\'b0\'a3
+\f0  
+\f1 \'c7\'a5\'bd\'c3
+\f0 \
+setopt PROMPT_SUBST\
+PROMPT='%B%n[%D\{%L:%M:%S\}]%f:%F$\{$\{(%):-%~\}\}%f$ %b'\
+TMOUT=1\
+\
+TRAPALRM() \{\
+    zle reset-prompt\
+\}\
 \
 3. 
 \f1 MariaDB\
 root password \'bc\'b3\'c1\'a4 : 
-\f2 \cf7 \cb8 \outl0\strokewidth0 \strokec7 ALTER USER \cf9 \strokec9 'root'\cf10 \strokec10 @\cf9 \strokec9 'localhost'\cf7 \strokec7  IDENTIFIED BY \cf9 \strokec9 'PASSWORD_STRING'\cf10 \strokec10 ;}
+\f2 \cf7 \cb8 ALTER USER \cf9 'root'\cf10 @\cf9 'localhost'\cf7  IDENTIFIED BY \cf9 'PASSWORD_STRING'\cf10 ;}
