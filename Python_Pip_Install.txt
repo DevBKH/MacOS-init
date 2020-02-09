@@ -1,0 +1,4 @@
+#python에서 필요한 패키지를 설치하기 위한 유틸리티 pip를 먼저 설치한다.
+
+ sudo easy_install pip
+
